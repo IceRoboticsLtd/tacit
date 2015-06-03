@@ -64,11 +64,11 @@ version: (1.0.0) 1.0.0
 description: example of a module
 entry point: (index.js) index.js
 test command: make test
-git repository: https://github.com/wvanheemstra/tacit-helloworld.git
+git repository: https://github.com/vanHeemstraSystems/tacit-helloworld.git
 keywords: tacit example
 license: (ISC) MIT
 
-About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
+About to write to /Users/wvanheemstra/git/vanHeemstraSystems/tacit-helloworld/package.json:
 
 {
   "name": "tacit-helloworld",
@@ -80,7 +80,7 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wvanheemstra/tacit-helloworld.git"
+    "url": "git+https://github.com/vanHeemstraSystems/tacit-helloworld.git"
   },
   "keywords": [
     "tacit",
@@ -90,17 +90,17 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
   "license": "MIT",
   "licenses": [{
     "type": "MIT",
-    "url": "https://github.com/wvanheemstra/tacit-helloworld/blob/master/LICENSE-MIT"
+    "url": "https://github.com/vanHeemstraSystems/tacit-helloworld/blob/master/LICENSE-MIT"
   }],
   "bugs": {
-    "url": "https://github.com/wvanheemstra/tacit-helloworld/issues"
+    "url": "https://github.com/vanHeemstraSystems/tacit-helloworld/issues"
   },
-  "homepage": "https://github.com/wvanheemstra/tacit-helloworld"
+  "homepage": "https://github.com/vanHeemstraSystems/tacit-helloworld"
 }
 
 Is this ok? (yes) yes
 
-Now a package.json file will have been written to /Users/wvanheemstra/Sites/tacit-helloworld/
+Now a package.json file will have been written to /Users/wvanheemstra/git/vanHeemstraSystems/tacit-helloworld/
 
 ========= Creating a Module ==========
 
@@ -266,7 +266,7 @@ npm test
 
 The output should look something like the following.
 
-> tacit-helloworld@1.0.0 test /Users/wvanheemstra/Sites/tacit-helloworld.git
+> tacit-helloworld@1.0.0 test /Users/wvanheemstra/git/vanHeemstraSystems/tacit-helloworld.git
 > make test
 
 ./node_modules/.bin/mocha --reporter spec
@@ -298,7 +298,7 @@ git push origin master --tags
 
 Make tacit-helloworld a submodule of tacit, by going into the tacit repository and typing the following:
 
-git submodule add git://github.com/wvanheemstra/tacit-helloworld.git tacit-helloworld
+git submodule add git://github.com/vanHeemstraSystems/tacit-helloworld.git tacit-helloworld
 
 The outcome will be as follows:
 
@@ -311,13 +311,13 @@ Resolving deltas: 100% (2/2), done.
 
 Now you should see a directory ('tacit-helloworld') been created inside tacit. It has its own .git folder, so it can be referenced like any other repository:
 
-git://github.com/wvanheemstra/tacit/tacit-helloworld.git
+git://github.com/vanHeemstraSystems/tacit/tacit-helloworld.git
 
 Inside tacit there will be a file .gitmodules with the following content:
 
 [submodule "tacit-helloworld"]
 	path = tacit-helloworld
-	url = git://github.com/wvanheemstra/tacit-helloworld.git
+	url = git://github.com/vanHeemstraSystems/tacit-helloworld.git
 
 It is also a good idea to create a version tag as well. Here’s how to do just that.
 git tag 1.0.0
@@ -327,8 +327,8 @@ git push origin master --tags
 
 Note that for whatever reason if you decide not to publish your module on npm, the npm package format provides value in itself in both portability and ease of installation. For example, you can install packages directly from Github, and even specify a tag, sha, or branch if you want.
 
-npm install git://github.com/wvanheemstra/tacit-helloworld.git
-npm install git://github.com/wvanheemstra/tacit-helloworld.git#1.0.0
+npm install git://github.com/vanHeemstraSystems/tacit-helloworld.git
+npm install git://github.com/vanHeemstraSystems/tacit-helloworld.git#1.0.0
 
 The reply will be:
 
