@@ -8,6 +8,7 @@ Requirements:
 The default installation directories are:
 
 /usr/local/bin/node for node
+/usr/local/lib/node_modules for node modules
 /usr/local/bin/npm for nmp
 
 - Make sure you have the latest version and /usr/local/bin is in your $PATH. To upgrade, run: [sudo] npm install npm -g
