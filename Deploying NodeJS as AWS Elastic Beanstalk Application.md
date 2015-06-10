@@ -21,4 +21,92 @@ After having created and initialized a Git repository locally, run the following
 
 eb init
 
+You will be asked the following:
+
+Select a default region
+1) us-east-1 : US East (N. Virginia)
+2) us-west-1 : US West (N. California)
+3) us-west-2 : US West (Oregon)
+4) eu-west-1 : EU (Ireland)
+5) eu-central-1 : EU (Frankfurt)
+6) ap-southeast-1 : Asia Pacific (Singapore)
+7) ap-southeast-2 : Asia Pacific (Sydney)
+8) ap-northeast-1 : Asia Pacific (Tokyo)
+9) sa-east-1 : South America (Sao Paulo)
+(default is 3):
+
+We pick 4 for eu-west-1
+
+Enter Application Name
+(default is "core"):
+
+We type the application name (e.g. core)
+
+Application core has been created.
+
+Select a platform.
+1) PHP
+2) Node.js
+3) IIS
+4) Tomcat
+5) Python
+6) Ruby
+7) Docker
+8) Multi-container Docker
+9) GlassFish
+10) Go
+(default is 1):
+
+We type 2 for Node.js
+
+Do you want to set up SSH for your instances?
+(y/n):
+
+We type y for yes
+
+Select a keypair.
+1) tacit-core-key-pair-eu
+2) [ Create new KeyPair ]
+(default is 2):
+
+We type 2 for create new KeyPair
+
+Type a keypair name.
+(Default is aws-eb):
+
+We type core-aws-eb
+
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+
+We type a passphrase (*************)
+
+Enter same passphrase again:
+
+We type same passphrase
+
+Your identification has been saved in /Users/wvanheemstra/.ssh/core-aws-eb.
+Your public key has been saved in /Users/wvanheemstra/.ssh/core-aws-eb.pub.
+The key fingerprint is:
+f7:75:12:bb:73:73:65:f1:74:de:ef:6f:7d:c1:f9:3d core-aws-eb
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|                 |
+|              ..o|
+|               ==|
+|        S .   = O|
+|         . . . Oo|
+|            . o.O|
+|               EO|
+|               .*|
++-----------------+
+Enter passphrase:
+
+We type passphrase (like before)
+
+WARNING: Uploaded SSH public key for "core-aws-eb" into EC2 for region eu-west-1.
+
 ========= Develop Locally =========
+
+... more
