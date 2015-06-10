@@ -115,7 +115,20 @@ Next, we run our program, add it to our repository, and commit our changes.
 
 ========= Test Locally =========
 
-At this point we would test our application locally before deploying to Elastic Beanstalk. Suppose we find a few issues, we fix them before commiting our changes to Git.
+At this point we would test our application locally before deploying to Elastic Beanstalk. Suppose we find a few issues, we fix them before committing our changes to Git.
+
+========= Deploy to AWS Elastic Beanstalk =========
+
+After testing our application, we are ready to deploy it to Elastic Beanstalk. Deploying requires the following steps:
+
+- Configure Elastic Beanstalk.
+
+- Deploy a sample application.
+
+- Update the sample application with our application.
+
+When we update the sample application with our application, Elastic Beanstalk replaces the existing sample application version with our new application version in the existing environment.
+
 
 
 ... more
