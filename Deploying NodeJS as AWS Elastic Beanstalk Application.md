@@ -15,4 +15,10 @@ After we remotely test and debug our Elastic Beanstalk application, we can then 
 
 ========= Get Set Up =========
 
-EB CLI is a command line interface that you can use with Git to deploy applications quickly and more easily. EB is available as part of the Elastic Beanstalk command line tools package. For instructions to install EB CLI, see [Installing the EB Command Line Interface (CLI)] (http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html).
+EB CLI is a command line interface that we can use with Git to deploy applications quickly and more easily. EB is available as part of the Elastic Beanstalk command line tools package. For instructions to install EB CLI, see [Installing the EB Command Line Interface (CLI)] (http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html).
+
+After having created and initialized a Git repository locally, run the following command inside the repository and EB CLI will recognize that your application is set up with Git.
+
+eb init
+
+========= Develop Locally =========
