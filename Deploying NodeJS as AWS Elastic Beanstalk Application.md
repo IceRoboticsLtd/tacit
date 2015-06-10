@@ -109,4 +109,13 @@ WARNING: Uploaded SSH public key for "core-aws-eb" into EC2 for region eu-west-1
 
 ========= Develop Locally =========
 
+After installing EB CLI 3.x on our local computer, we use the Git command line as we normally would to manage our local repository and add and commit changes. We develop our Node.js application as we normally would with our favorite editor.
+
+Next, we run our program, add it to our repository, and commit our changes.
+
+========= Test Locally =========
+
+At this point we would test our application locally before deploying to Elastic Beanstalk. Suppose we find a few issues, we fix them before commiting our changes to Git.
+
+
 ... more
