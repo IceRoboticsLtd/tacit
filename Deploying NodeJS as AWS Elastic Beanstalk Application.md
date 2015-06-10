@@ -176,7 +176,15 @@ To update the sample application with our local application
 
 eb deploy
 
-Elastic Beanstalk will attempt to start app.js, then server.js, and then "npm start" in that order. NOTE: If server.js is in a subfolder (e.g. servers), the path needs to be set in the package.json as the value of the key 'main', for Elastic Beansteak to be able to find it and start it.
+Elastic Beanstalk will attempt to start app.js, then server.js, and then "npm start" in that order.
+
+NOTE: If server.js is in a subfolder (e.g. servers), the path needs to be set in the package.json as the value of the key 'start' in the scripts section, for Elastic Beansteak to be able to find it and start it, e.g.
+
+"scripts": {
+    "start": "node servers/server"
+}
+
+Typing 'npm start' in the root of the repository will start the server.js file inside the servers folder.
 
 2. If everything worked as expected, we should see something similar to the following:
 
