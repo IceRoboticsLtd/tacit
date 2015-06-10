@@ -129,6 +129,67 @@ After testing our application, we are ready to deploy it to Elastic Beanstalk. D
 
 When we update the sample application with our application, Elastic Beanstalk replaces the existing sample application version with our new application version in the existing environment.
 
+Create your running environment, by typing:
+
+eb create
+
+Enter Environment Name
+(default is core-dev):
+
+We type core-dev if we want to deploy to the development environment (core-prod if we want to deploy to the production environment)
+
+Enter DNS CNAME prefix
+(default is core-dev):
+
+Creating application version archive "6b3f".
+Uploading core/6b3f.zip to S3. This may take a while.
+Upload Complete.
+Environment details for: core-dev
+  Application name: core
+  Region: eu-west-1
+  Deployed Version: 6b3f
+  Environment ID: e-kpwdcfcipb
+  Platform: 64bit Amazon Linux 2015.03 v1.4.1 running Node.js
+  Tier: WebServer-Standard
+  CNAME: core-dev.elasticbeanstalk.com
+  Updated: 2015-06-10 13:19:52.570000+00:00
+Printing Status:
+INFO: createEnvironment is starting.
+INFO: Using elasticbeanstalk-eu-west-1-506043967056 as Amazon S3 storage bucket for environment data.
+INFO: Created security group named: sg-248bbb41
+INFO: Created load balancer named: awseb-e-k-AWSEBLoa-66QZU7Y98NTE
+INFO: Created security group named: awseb-e-kpwdcfcipb-stack-AWSEBSecurityGroup-AZBM01N4XD0B
+INFO: Created Auto Scaling launch configuration named: awseb-e-kpwdcfcipb-stack-AWSEBAutoScalingLaunchConfiguration-1IJ5RCBVRTMHC
+INFO: Waiting for EC2 instances to launch. This may take a few minutes.
+INFO: Created Auto Scaling group policy named: arn:aws:autoscaling:eu-west-1:506043967056:scalingPolicy:ff446edb-2c7d-4ed1-ae0d-39d25f087816:autoScalingGroupName/awseb-e-kpwdcfcipb-stack-AWSEBAutoScalingGroup-MQ1OCU6PRYNM:policyName/awseb-e-kpwdcfcipb-stack-AWSEBAutoScalingScaleUpPolicy-FRS20F0IRBEC
+INFO: Created Auto Scaling group policy named: arn:aws:autoscaling:eu-west-1:506043967056:scalingPolicy:5bb1d696-6fa2-414c-8852-ec6bf6807824:autoScalingGroupName/awseb-e-kpwdcfcipb-stack-AWSEBAutoScalingGroup-MQ1OCU6PRYNM:policyName/awseb-e-kpwdcfcipb-stack-AWSEBAutoScalingScaleDownPolicy-ROI66K2YMR68
+INFO: Created CloudWatch alarm named: awseb-e-kpwdcfcipb-stack-AWSEBCloudwatchAlarmHigh-FQFFOMYWNPZQ
+INFO: Created CloudWatch alarm named: awseb-e-kpwdcfcipb-stack-AWSEBCloudwatchAlarmLow-1IV0X5MJYGTFA
+
+View the application by typing the following:
+
+eb open
+
+To update the sample application with our local application
+
+1. Make changes to our code, and then type the following command:
+
+eb deploy
+
+Elastic Beanstalk will attempt to start app.js, then server.js, and then "npm start" in that order. NOTE: If server.js is in a subfolder (e.g. servers), the path needs to be set in the package.json as the value of the key 'main', for Elastic Beansteak to be able to find it and start it.
+
+2. If everything worked as expected, we should see something similar to the following:
+
+
+
+NOTE: To configure an Elastic Beanstalk environment using the AWS Management Console:
+
+Open the Elastic Beanstalk console at https://console.aws.amazon.com/elasticbeanstalk/.
+
+- From the region list, select the region that includes the environment that we want to work with. (e.g. Ireland).
+
+- On the Elastic Beanstalk console applications page, click the name of the environment with the settings that we want to edit.
+
 
 
 ... more
